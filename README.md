@@ -1,6 +1,6 @@
 # mac-utm-remover
 
-UTMRemover is a macOS application that automatically removes UTM parameters from URLs when they are copied to the clipboard. This app runs in the background and helps keep your links clean and free of tracking parameters.
+UTMRemover is a macOS application that automatically removes UTM parameters and LinkedIn-specific tracking parameters (rcm and trackingId) from URLs when they are copied to the clipboard. This app runs in the background and helps keep your links clean and free of tracking parameters.
 
 ## Prerequisites
 
@@ -73,7 +73,11 @@ If you haven't already installed Xcode:
 
 ## Usage
 
-Once installed and running, UTMRemover will automatically remove UTM parameters from any URL you copy. You can verify this by copying a URL with UTM parameters and then pasting it somewhere - the UTM parameters should be gone.
+Once installed and running, UTMRemover will automatically remove the following tracking parameters from any URL you copy:
+- UTM parameters (utm_*)
+- LinkedIn tracking parameters (rcm* and trackingId*)
+
+You can verify this by copying a URL with these tracking parameters and then pasting it somewhere - the tracking parameters should be gone.
 
 ## Troubleshooting
 
@@ -86,7 +90,7 @@ If you encounter any issues:
 ## Contributing
 
 Feel free to fork this project and submit pull requests with improvements or bug fixes. Here are some ideas for contributions:
-- Add support for removing other types of tracking parameters
+- Add support for removing other types of tracking parameters (beyond UTM and LinkedIn parameters)
 - Implement a whitelist/blacklist feature for specific domains
 - Create a preferences window to customize the app's behavior
 
@@ -97,4 +101,3 @@ Feel free to fork this project and submit pull requests with improvements or bug
 ## Acknowledgements
 
 This project was created with the assistance of Claude.ai and the Sonnet 1.5 large language model. Special thanks to the open-source community for inspiration and resources.
-
